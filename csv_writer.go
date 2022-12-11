@@ -60,9 +60,9 @@ func (w *CSVWriter) writeCSV(results []KeyValue) error {
 	keys := pts.Strings()
 	header := w.getHeader(pts)
 
-	if err := w.Write(header); err != nil {
-		return err
-	}
+// 	if err := w.Write(header); err != nil {
+// 		return err
+// 	}
 
 	for _, result := range results {
 		record := toRecord(result, keys)
